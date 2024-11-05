@@ -25,3 +25,12 @@ arr.bubbleSort()
 print('Sorted array contains:\n', arr)
 
 print("El valor medio es: ", arr.mediana())
+
+arr.delete_duplicates()
+print("Arreglo sin duplicados:\n ", arr)
+
+arr.oddEvenSort()
+print(f"El arreglo se ordeno por par e impar.")
+
+arr.insertionSort()
+print("Trabajando el insertionsort, contando comparaciones")
