@@ -79,7 +79,33 @@ class Funciones(object):
         while not pila.is_empty():
             cadeinv+=pila.pop()
         return cadeinv
-    
+
+
+    def calculadora(self, lista):
+        pila=Funciones(len(lista))
+        
+        for a in lista:
+            if isinstance(a, (int, float)):
+                pila.push(a)
+                
+            elif a in ("+", "-", "*", "/"):
+                num2=pila.pop()
+                num1=pila.pop()
+                
+                if a=="+":
+                    re=num1+num2
+                elif a=="-":
+                    re=num1-num2
+                elif a=="*":
+                    re=num1*num2
+                elif a=="/":
+                    if num2 != 0:
+                        re=num1/num2
+                    else:
+                        return "Division por 0"
+                    
+                pila.push(re)
+        return pila.pop()
     
     
         
