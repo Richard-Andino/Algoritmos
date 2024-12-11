@@ -69,6 +69,16 @@ class Funciones(object):
         if not pila.is_empty():
             return "Parentesis no balanceados"
         return "Parentesis balanceados"
+
+
+    def invertirCadena(self, cadena):
+        pila=Funciones(len(cadena))
+        for a in cadena:
+            pila.push(a)
+        cadeinv=""
+        while not pila.is_empty():
+            cadeinv+=pila.pop()
+        return cadeinv
     
     
     
