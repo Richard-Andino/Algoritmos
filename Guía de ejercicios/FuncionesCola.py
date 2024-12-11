@@ -37,3 +37,12 @@ class Funciones(object):
     
     def peek(self):
         return self.__cola[0]
+
+    #Banco
+    def agregarCliente(self, cliente):
+        self.enqueue(cliente)
+        print("Nuevo cliente")
+        
+    def atenderCliente(self):
+        print("Cliente", self.__cola[0], "atendido")
+        self.dequeue()
